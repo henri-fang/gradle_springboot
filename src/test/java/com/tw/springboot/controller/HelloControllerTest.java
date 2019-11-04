@@ -23,21 +23,8 @@ public class HelloControllerTest {
 
     @Test
     public void helloGradle() throws Exception {
-        rangeCheck(10);
-        mvc.perform(get("/"))
+        mvc.perform(get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello Gradle!"));
-    }
-
-    private int size;
-
-    private void rangeCheck1(int index) {
-        if (index >= size)
-            throw new RuntimeException();
-    }
-
-    private void rangeCheck(int index) {
-        if (index >= size)
-            throw new RuntimeException();
     }
 }

@@ -16,6 +16,7 @@ plugins {
 
 // Define the main class for the application
 bootJar {
+    baseName = "springboot-app"
     mainClassName = 'com.tw.springboot.App'
 }
 
